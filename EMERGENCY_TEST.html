@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 TESTE DARK MODE</title>
+    <link href="http://localhost:3000/assets/tailwind.css" rel="stylesheet">
+    <script>
+        function toggleTest() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                console.log('❌ Removeu classe dark');
+            } else {
+                html.classList.add('dark');
+                console.log('✅ Adicionou classe dark');
+            }
+            console.log('🔍 Classes atuais:', html.className);
+        }
+    </script>
+</head>
+<body class="bg-beige-50 dark:bg-gray-800 text-gray-900 dark:text-gray-200 p-8 transition-colors duration-300">
+    <div class="max-w-md mx-auto">
+        <h1 class="text-3xl font-bold mb-4 text-beige-800 dark:text-gray-100">🧪 TESTE DARK MODE</h1>
+        
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md mb-4">
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+                Este é um teste direto do dark mode. Se as cores mudarem ao clicar no botão, 
+                o Tailwind está funcionando!
+            </p>
+            
+            <button onclick="toggleTest()" 
+                    class="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors">
+                🔄 ALTERNAR TEMA
+            </button>
+        </div>
+        
+        <div class="text-sm text-gray-600 dark:text-gray-400">
+            ✅ Abra o Developer Tools (F12) para ver os logs<br>
+            ✅ Se as cores mudarem = TAILWIND OK<br>
+            ❌ Se as cores não mudarem = PROBLEMA NO CSS
+        </div>
+    </div>
+</body>
+</html> 

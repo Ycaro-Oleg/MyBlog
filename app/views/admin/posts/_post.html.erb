@@ -1,0 +1,20 @@
+<tr>
+  <td class="px-6 py-4 whitespace-nowrap">
+    <div class="text-sm text-black dark:text-black"><%= post.title %></div>
+  </td>
+  <td class="px-6 py-4 whitespace-nowrap">
+    <% if post.published_at? %>
+      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-700 dark:text-green-100">
+        Published
+      </span>
+    <% else %>
+      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800 dark:bg-red-700 dark:text-red-100">
+        Rascunho
+      </span>
+    <% end %>
+  </td>
+  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+    <%= link_to "Edit", edit_admin_post_path(post), class: "text-indigo-600 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300" %>
+    <%= link_to "Delete", admin_post_path(post), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "text-red-600 dark:text-red-400 hover:text-red-900 dark:hover:text-red-300 ml-4" %>
+  </td>
+</tr>

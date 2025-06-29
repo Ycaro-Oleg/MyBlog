@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Dark Mode</title>
+    <link rel="stylesheet" href="app/assets/builds/tailwind.css">
+</head>
+<body class="bg-white dark:bg-gray-800 text-black dark:text-white min-h-screen p-8">
+    <h1 class="text-3xl font-bold mb-4">Teste do Modo Escuro</h1>
+    
+    <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mb-4">
+        <p>Este div deve ter fundo cinza claro no modo light e cinza escuro no modo dark.</p>
+    </div>
+    
+    <button onclick="toggleDark()" class="bg-blue-500 dark:bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-600 dark:hover:bg-blue-700">
+        Toggle Dark Mode
+    </button>
+    
+    <script>
+        function toggleDark() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html> 
