@@ -51,7 +51,7 @@ group :development, :test do
   gem "byebug"
 
   # Use RSpec for testing
-  gem "rspec-rails", "~> 6.0.0"
+  gem "rspec-rails", "~> 8.0.1"
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
